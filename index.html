@@ -44,11 +44,11 @@
             <div class="col-4">
                 <h3 class="mb-3 mt-4 text-white">~ DA FARE ~</h3>
                 <ul class="p-0">
-                    <li v-for="scheda in schede" v-show="scheda.doneScheda == false" class="scheda p-3 mb-5">
+                    <li v-for="(scheda, index) in schede" v-show="scheda.doneScheda == false" class="scheda p-3 mb-5">
                         <div>{{ scheda.nameScheda }}</div>
                         <div class="actions">
-                            <i class="fa-solid fa-check text-success "></i>
-                            <i class="fa-solid fa-trash  text-danger ms-3"></i>
+                            <i class="fa-solid fa-hourglass-end text-secondary"></i>
+                            <i @click="cancellaScheda(index)" class="fa-solid fa-trash  text-danger ms-3"></i>
                         </div>
                     </li>
                 </ul>
@@ -61,7 +61,7 @@
                     <li v-for="scheda in schede" v-show="scheda.doneScheda == true" class="scheda p-3 mb-4">
                         <div>{{ scheda.nameScheda }}</div>
                         <div class="actions">
-                            <i class="fa-solid fa-circle-xmark text-primary"></i>
+                            <i class="fa-solid fa-check text-success"></i>
                             <i class="fa-solid fa-trash  text-danger ms-3"></i>
                         </div>
                     </li>

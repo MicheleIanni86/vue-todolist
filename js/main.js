@@ -56,6 +56,12 @@ const app = createApp({
             }
             this.schede.push(copiaNuovaScheda);
             this.newScheda.nameScheda = '';
+        },
+
+
+        cancellaScheda(i) {
+            this.schede.splice(i, 1);
+
         }
 
     },
@@ -63,9 +69,7 @@ const app = createApp({
     mounted() {
 
     },
-});
-
-app.mount('#root');
+}).mount('#root');
 
 // END SCRIPT VUEJS-------------------------------------------------------------------------------------------
 
