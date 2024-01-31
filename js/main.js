@@ -9,39 +9,54 @@ const app = createApp({
 
             schede: [
                 {
-                    todoScheda: 'Prendere Latte',
+                    nameScheda: 'Prendere Latte',
                     doneScheda: true,
                 },
                 {
-                    todoScheda: 'Pagare Mutuo',
+                    nameScheda: 'Pagare Mutuo',
                     doneScheda: false,
                 },
                 {
-                    todoScheda: 'Impastare Pizza',
+                    nameScheda: 'Impastare Pizza',
                     doneScheda: false,
                 },
                 {
-                    todoScheda: 'Prove con Band',
+                    nameScheda: 'Prove con Band',
                     doneScheda: true,
                 },
                 {
-                    todoScheda: 'Fare Tagliando Moto',
+                    nameScheda: 'Fare Tagliando Moto',
                     doneScheda: true,
                 },
                 {
-                    todoScheda: 'Chiamare Commercialista',
+                    nameScheda: 'Chiamare Commercialista',
                     doneScheda: true,
                 },
                 {
-                    todoScheda: 'Seguire Lezione Vue',
+                    nameScheda: 'Seguire Lezione Vue',
                     doneScheda: false,
                 },
 
-            ]
+            ],
+
+            newScheda: {
+                nameScheda: '',
+                doneScheda: false,
+            },
         };
     },
 
     methods: {
+        caricaScheda() {
+            const copiaNuovaScheda = { ...this.newScheda };
+
+            if (!copiaNuovaScheda.nameScheda) {
+                alert('Inserisci qualcosa da Fare!!');
+                return;
+            }
+            this.schede.push(copiaNuovaScheda);
+            this.newScheda.nameScheda = '';
+        }
 
     },
 
