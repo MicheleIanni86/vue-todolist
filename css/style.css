@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+.scheda {
+    border-radius: 15px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scheda i {
+    cursor: pointer;
+}
