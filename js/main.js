@@ -5,6 +5,7 @@ const app = createApp({
     data() {
         return {
             mainTitle: 'To-Do LIST',
+            secondTitle: 'Aggiungi Nota'
         };
     },
 
