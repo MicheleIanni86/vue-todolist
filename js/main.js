@@ -29,10 +29,6 @@ const app = createApp({
                     doneScheda: true,
                 },
                 {
-                    nameScheda: 'Chiamare Commercialista',
-                    doneScheda: true,
-                },
-                {
                     nameScheda: 'Seguire Lezione Vue',
                     doneScheda: false,
                 },
