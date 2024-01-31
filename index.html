@@ -44,8 +44,8 @@
             <div class="col-4">
                 <h3 class="mb-3 mt-4 text-white">~ DA FARE ~</h3>
                 <ul class="p-0">
-                    <li class="scheda p-3 mb-5">
-                        <div>Fare 1</div>
+                    <li v-for="scheda in schede" v-show="scheda.doneScheda == false" class="scheda p-3 mb-5">
+                        <div>{{ scheda.todoScheda }}</div>
                         <div class="actions">
                             <i class="fa-solid fa-check text-success "></i>
                             <i class="fa-solid fa-trash  text-danger ms-3"></i>
@@ -58,8 +58,8 @@
             <div class="col-4">
                 <h3 class="mb-3 mt-4 text-white">~ FATTO ~</h3>
                 <ul class="p-0">
-                    <li class="scheda p-3 mb-4">
-                        <div>Fatto 1</div>
+                    <li v-for="scheda in schede" v-show="scheda.doneScheda == true" class="scheda p-3 mb-4">
+                        <div>{{ scheda.todoScheda }}</div>
                         <div class="actions">
                             <i class="fa-solid fa-circle-xmark text-primary"></i>
                             <i class="fa-solid fa-trash  text-danger ms-3"></i>

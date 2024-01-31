@@ -5,7 +5,39 @@ const app = createApp({
     data() {
         return {
             mainTitle: 'To-Do LIST',
-            secondTitle: 'Aggiungi Nota'
+            secondTitle: 'Aggiungi Nota',
+
+            schede: [
+                {
+                    todoScheda: 'Prendere Latte',
+                    doneScheda: true,
+                },
+                {
+                    todoScheda: 'Pagare Mutuo',
+                    doneScheda: false,
+                },
+                {
+                    todoScheda: 'Impastare Pizza',
+                    doneScheda: false,
+                },
+                {
+                    todoScheda: 'Prove con Band',
+                    doneScheda: true,
+                },
+                {
+                    todoScheda: 'Fare Tagliando Moto',
+                    doneScheda: true,
+                },
+                {
+                    todoScheda: 'Chiamare Commercialista',
+                    doneScheda: true,
+                },
+                {
+                    todoScheda: 'Seguire Lezione Vue',
+                    doneScheda: false,
+                },
+
+            ]
         };
     },
 
