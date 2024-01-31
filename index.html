@@ -47,9 +47,9 @@
                     <ul class="p-0">
                         <li v-for="(scheda, index) in schede" v-show="scheda.doneScheda == false" class="scheda p-3 mb-4">
                             <div class="fw-bold">{{ scheda.nameScheda }}</div>
-                            <div class="actions">
-                                <i class="fa-solid fa-hourglass-end text-secondary"></i>
-                                <i @click="cancellaScheda(index)" class="fa-solid fa-trash  text-danger ms-3"></i>
+                            <div class="fs-5">
+                                <i @click="schedaFatta(index)" class="fa-solid fa-clipboard-check text-success"></i>
+                                <i @click="cancellaScheda(index)" class="fa-solid fa-x  text-danger ms-3"></i>
                             </div>
                         </li>
                     </ul>
@@ -61,9 +61,9 @@
                     <ul class="p-0">
                         <li v-for="(scheda, index) in schede" v-show="scheda.doneScheda == true" class="scheda p-3 mb-4">
                             <div class="fw-bold">{{ scheda.nameScheda }}</div>
-                            <div class="actions">
-                                <i class="fa-solid fa-check text-success"></i>
-                                <i @click="cancellaScheda(index)" class="fa-solid fa-trash  text-danger ms-3"></i>
+                            <div class="fs-5">
+                                <i @click="schedaDaFare(index)" class="fa-solid fa-reply text-secondary"></i>
+                                <i @click="cancellaScheda(index)" class="fa-solid fa-x  text-danger ms-3"></i>
                             </div>
                         </li>
                     </ul>

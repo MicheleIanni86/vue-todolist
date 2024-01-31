@@ -58,6 +58,14 @@ const app = createApp({
         cancellaScheda(i) {
             this.schede.splice(i, 1);
 
+        },
+
+        schedaFatta(i) {
+            this.schede[i].doneScheda = true;
+        },
+
+        schedaDaFare(i) {
+            this.schede[i].doneScheda = false;
         }
 
     },
